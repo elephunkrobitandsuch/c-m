@@ -39,8 +39,6 @@ h3:first-child { margin-top:0px }
 strong { font-weight:bold }
 .style1 { color:#fff; font-family:Marcellus; text-decoration:none; font-size:medium }
 .style6 { color:#000; text-align:right }
-.style2 { font-size:x-large }
-.style3 { font-size:xx-large }
 .name { text-decoration:none; font-size:large; letter-spacing:0.1em }
 #PageDiv { position:relative; min-height:100% }
 #pagewrapper.f-ms { width:100%; z-index:0 }
@@ -52,15 +50,13 @@ strong { font-weight:bold }
 #pxspacer1.f-ms { overflow:hidden }
 #pxspacer4.f-ms { overflow:hidden }
 #bodywrapper.f-ms { width:100%; z-index:0 }
-#leftwrap.f-ms { width:47%; z-index:0; float:left; padding:2% 3% 3% 10% }
-#right-wrap.f-ms { width:27%; z-index:0; float:left; padding:2% 10% 3% 3% }
+#leftwrap { width:80%; z-index:0; float:left; padding:2% 10% 3% }
 @media screen and (max-width:800px)
 {
 	#pagewrapper.f-ms { width:auto }
 	#name.f-ms { width:30% }
 	#navitems.f-ms { width:70% }
-	#leftwrap.f-ms { width:80%; padding-right:10% }
-	#right-wrap.f-ms { width:40%; padding-left:30%; padding-right:30% }
+	#leftwrap { width:88%; padding-left:6%; padding-right:6% }
 }
 @media screen and (max-width:560px)
 {
@@ -69,7 +65,7 @@ strong { font-weight:bold }
 	#pxspacer.f-ms { width:12px }
 	#pxspacer1.f-ms { width:12px }
 	#pxspacer4.f-ms { width:12px }
-	#right-wrap.f-ms { width:60%; padding-left:20%; padding-right:20% }
+	#leftwrap { width:94%; padding-left:3%; padding-right:3% }
 }
 -->
 </style>
@@ -81,16 +77,155 @@ strong { font-weight:bold }
 <div id="PageDiv">
 	<div id="pagewrapper" class="f-ms"><div id="headerwrapper" class="f-ms"><div id="navwrapper" class="f-ms"><div id="name" class="name f-ms"><p class="f-fp f-lp"><a href="index.html">CARA MITSUKO</a></p>
 				</div>
-				<div id="navitems" class="f-ms"><p class="style6 f-fp f-lp"><a href="www.caramitsuko.com">Acting</a><img id="pxspacer" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="producingservice.html">Producing/Services</a><img id="pxspacer1" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="about.html">About</a><img id="pxspacer4" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="contact.html">Contact</a></p>
+				<div id="navitems" class="f-ms"><p class="style6 f-fp f-lp"><a href="acting.html">Acting</a><img id="pxspacer" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="producingservice.html">Producing/Services</a><img id="pxspacer1" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="about.html">About</a><img id="pxspacer4" class="f-ms" src="Resources/20pxspacer.png" alt=""><a href="contact.html">Contact</a></p>
 				</div>
 			</div>
 		</div>
-		<div id="bodywrapper" class="f-ms"><div id="leftwrap" class="f-ms"><p class="f-fp"><span class="style2"><span class="style3">Actress, Producer, Filmmaker</span></span></p>
-				<p>Cara is a dynamic performer, bringing complexity and a passionate vitality to the characters she plays. Her work on stage, television, and in film showcases her strength, determination, and curiosity.</p>
-				<p>As a producer, she is nimble, creative, insightful, and resourceful. She has guided multiple projects to finish on time and under budget.</p>
-				<p class="f-lp">She loves dogs, Star Trek, and an Oxford comma.</p>
+		<div id="bodywrapper" class="f-ms"><div id="leftwrap"><p class="f-fp f-lp"><style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .box {
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0;
+    color: #000;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+
+  .box:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .box:nth-child(1) { animation-delay: 0s; }
+  .box:nth-child(2) { animation-delay: 0.2s; }
+  .box:nth-child(3) { animation-delay: 0.4s; }
+  .box:nth-child(4) { animation-delay: 0.6s; }
+
+  .box img {
+    width: 30%;
+    object-fit: cover;
+    object-position: left;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .box:hover img {
+    transform: scale(1.05);
+  }
+
+  .box-content {
+    padding: 20px;
+    width: 70%;
+  }
+
+  .box h2 {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+
+  .box .subtitle {
+    font-style: italic;
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 0.75em;
+  }
+
+  @media (max-width: 860px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 15px 0;
+    }
+
+    .box {
+      flex-direction: row;
+      background-color: #f9f9f9;
+    }
+
+    .box.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .box img {
+      width: 30%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    .box.reverse img {
+      border-radius: 0 16px 16px 0;
+    }
+
+    .box-content {
+      width: 70%;
+      padding: 15px;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<div class="grid-container">
+  <div class="box">
+    <img src="Photos/producing.jpg">
+    <div class="box-content">
+      <h2>Producing</h2>
+      <div class="subtitle">Resourceful. Communicative. Efficient. Supportive.</div>
+      <p>Each film is a unique, and I will do my best to help you hone and execute your vision. While I do charge a rate, the important thing is that the crew is cared for and the art is made.</p>
+    </div>
+  </div>
+
+  <div class="box reverse">
+    <img src="Photos/coaching.jpg">
+    <div class="box-content">
+      <h2>Actor Career Coaching</h2>
+      <p>Whether you’re looking for representation, just starting to think about your reel, or looking for your first acting class, I’m happy you’re here! A career in the arts takes a lot of effort, dedication, and guts. If you are looking for some guidance, I’m here for you!</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <img src="Photos/script.jpg">
+    <div class="box-content">
+      <h2>Script Consultation</h2>
+      <div class="subtitle">Resourceful. Communicative. Efficient. Supportive.</div>
+      <p>Maybe you have a shiny first draft, or maybe you’ve just got an idea. Wherever you are in the life cycle of your screenplay, I’d love to help you clarify and hone your vision. From outline to drafting, if you need support I’ve got you!</p>
+    </div>
+  </div>
+
+  <div class="box reverse">
+    <img src="Photos/budget.jpg">
+    <div class="box-content">
+      <h2>Budget Creation</h2>
+      <div class="subtitle">Resourceful. Communicative. Efficient. Supportive.</div>
+      <p>I specialize in micro-budget and ultra-low budget filmmaking. Put in a penny, squeeze out a quarter. If you are concerned about limited resources, and want to know where to best leverage your funds, let’s talk! Most short film budgets take 2-3 hours. Feature films can take minimum 5-10 hours depending on scale.</p>
+    </div>
+  </div>
+</div>
+</p>
 			</div>
-			<div id="right-wrap" class="f-ms"></div>
 		</div>
 	</div>
 </div>
