@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Contact</title>
 <meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
+<meta name="generator" content="Freeway Pro 7.1">
 <style type="text/css">
 <!--
 body { margin:0px; background-color:#625e5d; height:100% }
@@ -49,30 +49,37 @@ strong { font-weight:bold }
 .style6 { color:#000; text-align:right }
 .style3 { font-size:xx-large }
 .style5 { text-align:left }
+.style7 { text-align:right }
 .name { text-decoration:none; font-size:large; letter-spacing:0.1em }
-#PageDiv { position:relative; min-height:100% }
+#PageDiv { position:relative }
 #pagewrapper.f-ms { width:100%; z-index:0 }
-#headerwrapper.f-ms { width:100%; height:100px; z-index:0 }
-#navwrapper.f-ms { width:94%; z-index:0; padding-left:3%; padding-top:3%; padding-right:3% }
+#headerwrapper.f-ms { width:100%; height:100px; z-index:0; float:left }
+#navwrapper.f-ms { width:94%; z-index:0; float:left; padding-left:3%; padding-top:3%; padding-right:3% }
 #name.f-ms { width:20%; z-index:0; float:left }
 #navitems.f-ms { width:80%; z-index:0; float:left }
 #pxspacer.f-ms { overflow:hidden }
 #pxspacer1.f-ms { overflow:hidden }
 #pxspacer4.f-ms { overflow:hidden }
-#bodywrapper.f-ms { width:100%; z-index:0 }
+#bodywrapper { width:100%; z-index:0; float:left }
 #leftwrap { width:47%; z-index:0; float:left; padding:2% 3% 3% 10% }
 #item4 { width:100%; z-index:0; float:left; padding-bottom:3% }
 #item1 { width:50%; z-index:0; float:left; padding-top:3% }
 #item2 { width:50%; z-index:0; float:left; padding-top:3% }
-#right-wrap.f-ms { width:27%; z-index:0; float:left; padding:2% 10% 3% 3% }
+#socials { width:100%; min-height:100px; z-index:0; float:left }
+#right-wrap { width:27%; z-index:0; float:left; padding:2% 10% 3% 3% }
 #cara.f-ms { width:100%; overflow:hidden }
+#footerwrapper.f-ms { width:90%; z-index:0; float:left; padding-right:10%; padding-bottom:50px }
+#instagram.f-ms { width:45px; height:40px; z-index:0; float:right; padding-left:15px; padding-top:15px; padding-bottom:15px }
+#facebook.f-ms { width:45px; min-height:40px; z-index:0; float:right; padding-left:15px; padding-top:15px; padding-bottom:15px }
+#imdb.f-ms { width:45px; min-height:40px; z-index:0; float:right; padding-left:15px; padding-top:15px; padding-bottom:15px }
 @media screen and (max-width:800px)
 {
+	#PageDiv { min-height:100% }
 	#pagewrapper.f-ms { width:auto }
 	#name.f-ms { width:30% }
 	#navitems.f-ms { width:70% }
 	#leftwrap { width:80%; padding-right:10% }
-	#right-wrap.f-ms { width:40%; padding-left:30%; padding-right:30% }
+	#right-wrap { width:40%; padding-left:30%; padding-right:30% }
 }
 @media screen and (max-width:560px)
 {
@@ -81,7 +88,8 @@ strong { font-weight:bold }
 	#pxspacer.f-ms { width:12px }
 	#pxspacer1.f-ms { width:12px }
 	#pxspacer4.f-ms { width:12px }
-	#right-wrap.f-ms { width:60%; padding-left:20%; padding-right:20% }
+	#right-wrap { width:60%; padding-left:20%; padding-right:20% }
+	#footerwrapper.f-ms { width:97%; padding-right:3% }
 }
 -->
 </style>
@@ -97,7 +105,7 @@ strong { font-weight:bold }
 				</div>
 			</div>
 		</div>
-		<div id="bodywrapper" class="f-ms"><div id="leftwrap"><div id="item4"><p class="f-fp f-lp"><span class="style3">Contact</span></p>
+		<div id="bodywrapper"><div id="leftwrap"><div id="item4"><p class="f-fp f-lp"><span class="style3">Contact</span></p>
 				</div>
 				<div id="item1"><p class="style5 f-fp"><strong>Acting inquiries</strong></p>
 					<p>&nbsp;</p>
@@ -114,8 +122,61 @@ strong { font-weight:bold }
 					<p>• Budget creation<br>•&nbsp;Script consultation<br>•&nbsp;Producing</p>
 					<p class="f-lp"><em>Contact for rates and availability</em></p>
 				</div>
+				<p class="f-fp">&nbsp;</p>
+				<div id="socials"></div>
 			</div>
-			<div id="right-wrap" class="f-ms"><p class="f-fp f-lp"><img id="cara" class="f-ms" src="Resources/contact.jpg" alt=""></p>
+			<div id="right-wrap"><p class="f-fp f-lp"><img id="cara" class="f-ms" src="Resources/contact.jpg" alt=""></p>
+			</div>
+		</div>
+		<div id="footerwrapper" class="f-ms"><div id="instagram" class="f-ms"><p class="f-fp f-lp"><a href="https://www.imdb.com/name/nm4523248/" target="_blank" style="display: block; width: 100%; perspective: 1000px;">
+  <img
+    src="Photos/imdb_icon.png"
+    alt="IMDb"
+    style="
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease;
+      transform-style: preserve-3d;
+    "
+    onmouseover="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(0.95) translateZ(-2px)'; }"
+    onmouseout="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(1) translateZ(0)'; }"
+  >
+</a>
+</p>
+			</div>
+			<div id="facebook" class="f-ms"><p class="f-fp f-lp"><a href="https://www.facebook.com/caramitsuko" target="_blank" style="display: block; width: 100%; perspective: 1000px;">
+  <img
+    src="Photos/facebook_icon.png"
+    alt="Facebook"
+    style="
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease;
+      transform-style: preserve-3d;
+    "
+    onmouseover="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(0.95) translateZ(-2px)'; }"
+    onmouseout="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(1) translateZ(0)'; }"
+  >
+</a>
+</p>
+			</div>
+			<div id="imdb" class="f-ms"><p class="f-fp f-lp"><a href="https://www.instagram.com/cara.mitsuko" target="_blank" style="display: block; width: 100%; perspective: 1000px;">
+  <img
+    src="Photos/instagram_icon.png"
+    alt="Instagram"
+    style="
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s ease;
+      transform-style: preserve-3d;
+    "
+    onmouseover="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(0.95) translateZ(-2px)'; }"
+    onmouseout="if(matchMedia('(hover: hover) and (pointer: fine)').matches) { this.style.transform='scale(1) translateZ(0)'; }"
+  >
+</a></p>
 			</div>
 		</div>
 	</div>
